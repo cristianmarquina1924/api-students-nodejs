@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('./database'); // Importa la conexión a la base de datos
+const db = require('./db'); // Importa la conexión a la base de datos
 
 const app = express();
 const PORT = process.env.PORT || 8010;
@@ -103,3 +103,4 @@ app.listen(PORT, () => {
   console.log(`Servidor de la API escuchando en el puerto ${PORT}`);
 
 });
+
