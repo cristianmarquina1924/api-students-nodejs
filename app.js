@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('./database'); // Importa la conexión a la base de datos
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8010;
 
 app.use(express.json()); // Middleware para parsear JSON en el cuerpo de las solicitudes
 app.use(express.urlencoded({ extended: true })); // Middleware para parsear datos de formularios
@@ -101,4 +101,5 @@ app.delete('/student/:id', (req, res) => {
 // Iniciar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor de la API escuchando en el puerto ${PORT}`);
+
 });
